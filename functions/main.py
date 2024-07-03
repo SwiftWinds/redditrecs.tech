@@ -1,5 +1,5 @@
 # The Cloud Functions for Firebase SDK to create Cloud Functions and set up triggers.
-from firebase_functions import https_fn, options
+from firebase_functions import firestore_fn, https_fn, options
 
 # The Firebase Admin SDK to access Cloud Firestore.
 from firebase_admin import initialize_app
@@ -29,3 +29,14 @@ def get_suggestions(req: https_fn.Request) -> https_fn.Response:
     ]
 
     return https_fn.Response(json.dumps(suggestions), content_type="application/json")
+
+
+@firestore_fn.on_document_written("queries/{query}")
+def on_query_written(
+    event: firestore_fn.Event[firestore_fn.Change[firestore_fn.DocumentSnapshot]],
+) -> None:
+    # check if the event is a deletion. If so, return early
+    if event.data.after.exists is False:
+        return
+    # get the query from the event
+    query = event.data.after.get("query")

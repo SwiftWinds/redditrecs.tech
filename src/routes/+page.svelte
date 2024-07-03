@@ -12,7 +12,7 @@
 	}
 </script>
 
-<form autocomplete="off" on:submit|preventDefault={() => goto(`/search/${query}`)}>
+<form autocomplete="off" on:submit|preventDefault={() => goto(`/search?q=${query}`)}>
 	<input type="text" name="q" id="q" bind:value={query} on:keyup={getSuggestions} />
 	<div id="result">
 		<ul>
