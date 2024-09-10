@@ -1,0 +1,78 @@
+{
+    "query": "best git mergetool",
+    "title": "Do you use some git mergetool? What should I get to start working seriously with git",
+    "selftext": "I'm a beginner in git and I want to know if it's good to use a mergetool to use git. I don't find the command line so intuitive to find differences between files. I've heard that a complete GUI for git is not so reliable, is it the same with a mergetool? Is it some tool outside git I need to get or just command line is enough?",
+    "comment_thread": {
+        "body": "Git guis are discouraged because they make assumptions about things and hide those complexities from you.\n\nMerge/diff tools have a single purpose - to allow you to see and merge changes in a file.\n\nI use the git command line exclusively, either in bash or PowerShell. But I use a merge tool (BeyondCompare) for diffs and merges.",
+        "items_recommended": [
+            {
+                "name": "Beyond Compare",
+                "description": "Beyond Compare is a software application used by developers, system administrators and others to compare, merge, and synchronize data. It runs on Windows, macOS, and Linux.",
+                "url": "https://www.scootersoftware.com/",
+            },
+        ],
+        "items_discouraged": [],
+        "score": 3,
+        "author": "Matosawitko",
+        "replies": [
+            {
+                "body": "> make assumptions about things and hide those complexities from you\n\nFor example? Not arguing just hasn't been my experience",
+                "items_recommended": [],
+                "items_discouraged": [],
+                "score": 2,
+                "author": "olets",
+                "replies": [
+                    {
+                        "body": "Which ones are you familiar with? I've used git gui/gitk, Sourcetree, Github Desktop, and Tortoise. They all vary quite a bit in terms of features, etc, but in general you have to understand the underlying git commands to use them well. At which point you might as well just use the command line.",
+                        "items_recommended": [],
+                        "items_discouraged": [],
+                        "score": 2,
+                        "author": "Matosawitko",
+                        "replies": [
+                            {
+                                "body": "I'm a Mac user so not Tortoise but the rest of those and others - Git UIs are something I geek out about, so I try to play with all that I can. (Though as I said in another comment GitHub Desktop is so minimally featured and idiomatic I don't even really consider it a \"Git UI\"! More an app for doing a few interactions with Git repos.)\n\nRe needing to know underlying Git commands: this probably comes down to how different people's minds work. When I was starting out I found Sourcetree hugely helpful for making sense of basic concepts like staged files, commits, branches. (Later I returned to it to help make sense other things, particularly around history rewriting where the visual confirmation and being able to see everything regardless of whether I'd know to look for it is helpful for me.) I've seen UIs help other beginners make sense of things too, so I always encourage at least trying it out.",
+                                "items_recommended": [],
+                                "items_discouraged": [],
+                                "score": 2,
+                                "author": "olets",
+                                "replies": [],
+                            }
+                        ],
+                    },
+                    {
+                        "body": "One example that comes to mind is Visual Studio. They originally used their own language and have been slowly moving to use gits official language. Recently they even pulled all of the git tools from the team panel into their own panel.\n\nThe old GitHub tool also had many assumptions but I haven't used that tool on a while so I don't know what it's current state is.",
+                        "score": 0,
+                        "author": "am385",
+                        "replies": [
+                            {
+                                "body": "Gotcha. Agreed on both counts — wasn't thinking of VSCode's Git support as a Git UI, but absolutely GitHub Desktop is (was) extreme on both assumptions and limiting what you can do (so extreme that I too haven't touched it in a long time)",
+                                "score": 1,
+                                "author": "olets",
+                                "replies": [],
+                            }
+                        ],
+                    },
+                ],
+            },
+            {
+                "body": "BeyondCompare isn't specifically for Git, right?",
+                "score": 1,
+                "author": "Rafaelchavez",
+                "replies": [
+                    {
+                        "body": "Right. It's a general difference tool that is configurable to use with git.",
+                        "score": 1,
+                        "author": "Matosawitko",
+                        "replies": [],
+                    }
+                ],
+            },
+            {
+                "body": "I'm a developer on gitkraken, so perhaps I'm biased, but I disagree. Some guis hide complexity sure, but they can also improve visibility to the internal state of the repo, which makes learning git way easier. This is where they really shine in my opinion. Github desktop is a poor example, look instead to Gitkraken, Fork, or Sourcetree. All of them provide feedback on how your actions affect your commits and the state of your repo that's hard to get on the CLI alone.\n\nTake the question of rebase vs merge for example. It's a question beginners ask a lot, even though they're pretty different in terms of what they do. It's hard to give a precise beginner-friendly verbal explanation of the difference, in part because any verbal explanation of a git thing is bound to be extremely jargon-heavy, but it's extremely obvious how they're different by just trying both and watching what they do to the graph.",
+                "score": 1,
+                "author": "axosoft-chuckd",
+                "replies": [],
+            },
+        ],
+    },
+}
